@@ -4,4 +4,4 @@
   tasks:
     - name: install update && upgrade
       shell: |
-        apt-get update && apt-get upgrade -y
+        apt-get update && apt-get upgrade -y && apt-get autoremove
