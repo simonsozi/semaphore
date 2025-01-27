@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.0.250
+  become: yes
+  tasks:
+    - name: install update && upgrade
+      shell: |
+        wg-quick down wg0
+        apt update && apt upgrade -y
+        echo "Update fertig"
+        wg-quick up wg0
