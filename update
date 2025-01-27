@@ -1,0 +1,7 @@
+---
+- hosts: proxmox
+  become: yes
+  tasks:
+    - name: install update && upgrade
+      shell: |
+        apt-get update && apt-get upgrade -y
